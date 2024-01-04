@@ -8,8 +8,6 @@ class WorldSceneForm extends Component
 {
     public function render()
     {
-        return <<<'blade'
-            <div></div>
-        blade;
+        return view('core::scene');
     }
 }
