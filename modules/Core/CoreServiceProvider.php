@@ -3,6 +3,7 @@
 namespace Modules\Core;
 
 use Livewire\Livewire;
+use Modules\Core\Forms\MainMenuForm;
 use Modules\Core\Forms\WorldSceneForm;
 use Illuminate\Support\ServiceProvider;
 
@@ -14,6 +15,7 @@ class CoreServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'\database\migrations');
         $this->loadRoutesFrom(__DIR__.'\routes.php');
 
+        Livewire::component('core::mainmenu', MainMenuForm::class);
         Livewire::component('core::scene', WorldSceneForm::class);
     }
 }

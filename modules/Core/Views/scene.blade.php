@@ -1,3 +1,0 @@
-<div>
-    {{dd($world)}}
-</div>

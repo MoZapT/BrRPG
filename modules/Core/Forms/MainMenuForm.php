@@ -3,14 +3,8 @@
 namespace Modules\Core\Forms;
 
 use Livewire\Component;
-use Modules\Core\Models\TimeModel;
-use Modules\Core\Models\EntityModel;
-use Modules\Core\Models\LocationModel;
-use Modules\Core\Models\MonthModel;
-use Modules\Core\Models\WorldModel;
-use Modules\Core\Managers\WorldGenerationManager;
 
-class WorldSceneForm extends Component
+class MainMenuForm extends Component
 {
     public EntityModel $player;
     public WorldModel $world;
