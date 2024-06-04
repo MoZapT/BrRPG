@@ -1,3 +1,3 @@
 <div>
-    AASDASDASD
+    {{dd($world)}}
 </div>

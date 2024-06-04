@@ -8,4 +8,9 @@ class MonthModel extends BaseModel
 {
     public string $slug;
     public int $days;
+
+    protected $fillable = [
+        'slug',
+        'days',
+    ];
 }

@@ -2,11 +2,9 @@
 
 namespace App\Models;
 
-class BaseModel
+use Illuminate\Database\Eloquent\Model;
+
+class BaseModel extends Model
 {
-    public function __construct(array $data) {
-        foreach ($data as $k => $v) {
-            $this->$k = $v;
-        }
-    }
+
 }
