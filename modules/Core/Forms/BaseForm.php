@@ -2,35 +2,30 @@
 
 namespace Modules\Core\Forms;
 
+use App\Models\User;
 use Livewire\Component;
-use Modules\Core\Models\TimeModel;
-use Modules\Core\Models\EntityModel;
-use Modules\Core\Models\LocationModel;
-use Modules\Core\Models\MonthModel;
-use Modules\Core\Models\WorldModel;
-use Modules\Core\Managers\WorldGenerationManager;
 
 class BaseForm extends Component
 {
-    public EntityModel $player;
-    public WorldModel $world;
-    /** @var null|Collection<LocationModel, int> $locations */
-    public $locations;
-    /** @var null|Collection<EntityModel, int> $entities */
-    public $entities;
+    public User $user;
 
-    public function mount()
+    public string $view;
+
+    public function mount($view)
     {
+        $this->view = $view;
+        $this->user = auth()->user();
+
         $this->init();
     }
 
     private function init()
     {
-        $this->world = WorldGenerationManager::generate();
+
     }
 
     public function render()
     {
-        return view('core::scene');
+        return view($this->view);
     }
 }
